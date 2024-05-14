@@ -19,10 +19,10 @@ def search_user(users: list[dict]) -> None:
 def remove(users: list[dict]) -> None:
     user_name: str = input('Kogo szukasz?: ')
     for user in users[1:]:
-         if user['name'] == user_name:
-             users.remove(user)
+        if user['name'] == user_name:
+            users.remove(user)
 
- def update(users: list[dict]) -> None:
+def update(users: list[dict]) -> None:
      user_name: str = input('Kogo szukasz?: ')
      for user in users[1:]:
          if user["name"] == user_name:

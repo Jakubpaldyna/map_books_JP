@@ -8,11 +8,18 @@ users: list[dict] = [
     {'name': 'Paweł', 'surname': 'Paszkowski', 'posts': 9},
 ]
 
-
-def remove(users: list[dict]) -> None:
+def update(users: list[dict]) -> None:
     user_name: str = input('Kogo szukasz?: ')
     for user in users[1:]:
-         if user['name'] == user_name:
-             users.remove(user)
-remove(users)
-print(users)
+    if user["name"] == user_name:
+        new_user_name = input("Wprowadż nowe imię")
+        new_user_surname = input("Wprowadź nowe nazwisko")
+        new_user_posts = input("Wprowadź nową liczbę postów")
+        user["name"] = new_user_name
+        user["surname"] = new_user_surname
+        user["posts"] = new_user_posts
+
+
+
+
+
